@@ -1,176 +1,167 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-<style>
-.row {
-    position: relative;
-    margin-left: 10%;
-    margin-right: 10%;
-}
+    <meta name="description" content="PROG 109 - Chessboard" />
+    <meta charset="utf-8" />
+    <title>Chess HTML5-Template</title>
+    <link rel="stylesheet" href="https://fontlibrary.org/en/font/open-baskerville" type="text/css"/>
+    <style>
+        body {
+            background-image: url("https://images.photowall.com/products/60513/misty-forest-2.jpg?h=699&q=85");
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Baskerville', sans-serif;
+        }
 
-.white {
-    border: 1px solid black;
-    width: 10%;
-    height: 60px;
-    background-color: white;
-    float: left;
-}
+        #title {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: lightyellow;
+            text-align: center;
+            padding: 10px;
+            margin: 0;
+            font-size: 36px;
+            z-index: 10;
+        }
 
-.black {
-    border: 1px solid black;
-    width: 10%;
-    height: 60px;
-    background-color: #787878;
-    float: left;
-}
+        #container {
+            margin: 20% 10% 5% 10%;
+        }
 
-#clear { /* Corrected the selector */
-    clear: both;
-}
+        .row {
+            position: relative;
+            margin-bottom: 5px;
+        }
 
-#footer {
-    border: solid 1px;
-    padding: 10px;
-    margin: 10px;
-}
+        .white, .black {
+            border: 1px solid black;
+            width: 10%;
+            height: 60px;
+            float: left;
+        }
 
-#container {
-    margin-top: 20%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 5%;
-}
+        .white {
+            background-color: white;
+        }
 
-#title {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    padding: 10px;
-    margin: 0px;
-    width: 100%;
-    background-color: lightyellow;
-    text-align: center;
-    z-index: 10;
-    font-family: 'open baskerville';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 36px;
-}
+        .black {
+            background-color: #787878;
+        }
 
-img {
-    margin-left: 5px;
-    margin-top: 10px;
-}
-
-body {
-    background-image: url("https://images.photowall.com/products/60513/misty-forest-2.jpg?h=699&q=85");
-}
-</style>
-<meta name="description" content="PROG 109 - Chessboard" />
-<meta charset="utf-8" />
-<title>Chess HTML5-Template</title>
-<link rel="stylesheet" media="screen" href="https://fontlibrary.org/en/font/open-baskerville" type="text/css"/>
-
+        #footer {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
-<h1 id="title">Chessboard</h1>
-<div id="container">
-<div class="row"> <!-- Row 1 -->
-<div class="white"><img src="https://pixabay.com/static/uploads/photo/2013/07/12/16/56/chess-151540_640.png" alt="chess figure - black castle" width="20"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-</div>
-<div class="clear"> </div>
+    <h1 id="title">Chessboard</h1>
+    <div id="container">
+        <!-- Chessboard rows -->
+       
+  <div class="row">
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+        </div>
+  <div class="row">
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+        </div>
+  <div class="row">
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+        </div>
+  <div class="row">
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+        </div>
+  <div class="row">
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+        </div>
+  <div class="row">
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+        </div>
+  <div class="row">
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+        </div>
+  <div class="row">
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+        </div>
+  <div class="row">
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+        </div>
+        <!-- Repeat the pattern of white and black squares as needed -->
+    </div>
 
-<div class="row"> <!-- Row 2 -->
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-</div>
-<div class="clear"> </div>
-<div class="row">
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-</div>
-<div class="clear"> </div>
-
-<div class="row"> <!-- Row 4 -->
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-</div>
-<div class="clear"> </div>
-<div class="row"> <!-- Row 5 -->
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-</div>
-<div class="clear"> </div>
-
-<div class="row"> <!-- Row 6 -->
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-</div>
-<div class="clear"> </div>
-<div class="row"> <!-- Row 7 -->
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-</div>
-<div class="clear"> </div>
-
-<div class="row"> <!-- Row 8 -->
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-</div>
-</div> <!-- END OF CONTAINER -->
-
-<div class="clear"> </div>
-<div id="footer"><p><a href="https://validator.w3.org/nu/check?uri=referer" target="_blank">NU HTML Checker </a><br>
-<a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"></a></p></div>
-
-
+    <div id="footer">
+        <p>
+            <a href="https://validator.w3.org/nu/check?uri=referer" target="_blank">NU HTML Checker</a><br>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!">
+            </a>
+        </p>
+    </div>
 </body>
 </html>
