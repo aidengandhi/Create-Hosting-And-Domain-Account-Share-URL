@@ -1,158 +1,111 @@
 <!DOCTYPE html>
-<head> 
-  <meta charset="utf-8">
+<head>
+<meta name="description" content="PROG 109 - Chessboard" />
+<meta charset="utf-8" />
+<title>Chess HTML5-Template</title>
+<link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/just-letters" type="text/css"/>
 <link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/just-letters" rel="stylesheet" type="text/css"/>
-
-
-
-#footer {
- border:solid 1px;
- padding: 10px;
- margin:10px;
-}
-
-
-#container {
- margin-top:20%;
- margin-left:10%;
- margin-right:10%;
- margin-bottom:5%;
-}
-
-
-
-
-
-#title {
- position:fixed;
- top:0px;
- left:0px; 
- padding:10px;
- margin:0px;
- width:100%;
- background-color:lightyellow;
- text-align:center; 
- z-index:10;
-}
-
-
-font-family: 'JustLettersMedium'; 
- font-weight: normal; 
- font-style: normal; 
- font-size:36px;
-
-
-
-img {
- margin-left: 5px;
- margin-top:10px;
- }
-
-
-
-body {
- background-image:url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRgWFhYYGRgYGhkcHBoaGhoaGhkaGBwcHBoaGBgcIS4lHB4rHxgZJjgmKy8xNTU1GiQ7QDszPy40NTEBDAwMEA8QGhERGjQhGCE0NDQ0NDQ0NDQ0NDQ0MTQxNDE0NDQ0MTQ0NDQxNDQ0NDQ0MTQ0NDQ0NDQ0NDQxNDQ0NP/AABEIALcBEwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAEAQIDBQYABwj/xABAEAABAwIDBQUFBQcDBQEAAAABAAIRAyEEEjEFBkFRYSJxgZGhEzKxwdEjcrLh8BQkQlJikqIHgsIVM2Nz8VP/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQID/8QAGhEBAQEBAQEBAAAAAAAAAAAAAAERMQJBIf/aAAwDAQACEQMRAD8ADpYwkkmSSZnU6zc8fzWgw+K9q81HjMBIDTbM3iQ7+YW5lU2G2S9zG1HANYSBmiPOBpwn81c4CiwNgVGveHCGBrpPPWx0uJ4cdF2cE+ErsYTlbLTwOt+vMAm6m2y1jqbXtc3NYOAgX4GIQeJxdMyYNN4sW5SLzy/h69dFFiajXM07UtuNNVUD4zaOU5QCGt9eE37tVVY/FZyDEfrii8cASBbiT6cVV1yNAipqNfKTaUhqCDEyQZ5SDIjwQrXwUQIDAQb8bc7G6gLwIzBo0Hanzj4FX3/TRVY5hEkscJJ7QMWg8RfQqq2FhXPaS3gQDPAEE/I+Sv8AAUu1DuzAvfpYqo8lbotZuBiwyq9pIGZg15tdaP7lndqUclaqz+V747sxj0hG7sMY7EsY+cr8zTBI/hJbp/UAsN17LgAXe6f4nk9IgfNGYuiWtudbeZaFm8Ng30wXUwS3MwTJLxmHusIN9WzIGlyjNobTdGRz2OJAykNc3tZgCHDnbS3gmfpL+M7vTTLKLgwdl7nOdpZzXgEi03lun8p5laPZwZmhrKJymxpmHNF79YzGx687ZnbJquovblY5jS8EgSW3N8xgzxgcuqbsba7GuDsmV5DZOcta4ke9BMXkGI49FWdXO8D/ALbDMkuhwN9SS9syfBS7fxHbIPFrNOjjqqHauOFSrRc3hHWDnmJ0Pgp9oYntwbl4Z6OVkLQ2+GMD6ThxmmARyGaZHOI9VRbmsnGUR1d+Bysd54LHkDR7QLRwjThxQe4jZxtHvf8AgepSPYsPSi08EWwWSMbCeAudrtI4qn228tEg6tj1VuqLePRg5mPgrOp64qdzRlq1geED/I/RaxrWjzWU3eI/asSBpNo++fktXTbN+CvrqeeHuqCEJiHSDBvz5dVJXeOCEqU+B/QUkLVNtajmabmBq4zr0AtF1jdoYgwWZnHibW8PQrZbUgNcS4QATFyT0HLvWZ2lhWNvLiJAe9oMAkXg8QLDwjqukcqyNZ3b7/oo3m6IDM1SDy+VlO3CsEl7jAt2BJJgRrEAnx6IrMuUmEbJMmBa9/ko6mpRmzmsg55ieGoFpOh4E8CstDKGzajmhwIg6S4DS3NclY+iNWBxk3OeSJtOVwGkaLlUa7Z2JYAQ/OQQZAgAHg7wnT1umVMJTyEseS4HRwAJme00gd1ieaBokukNiBx90R1J4+KV2Fe0mHTBiJJIPzC0glz2MGYw46EE5p696GxGJsAHEiRIvA00m58UY/CMFPKWEPAF7jmefUDTgoHYQNaCTEkdR4c0Qxpz2Bvy0QeKwpDXO5Ed9zGnHVWuEpML+2QQ1w0/iHHK/gbCB16Jm2shY8tsA6zSBIBJ/iaAP0I0RWfOg7/0eaLfR7Bjhr4ReOt1HgROa9y3KB0OseitqlQOpmRBy/DX1ugs9zHsax5eYkxYSTMeECFe0WszCoXNIGoNjx89DpwWL2LULWnK4i97wDa3z81qBhXZQXZgDJH6hQYPf2g1mNfk917WPHi0A+rSqXZdcMrU3nRtRjj3BwJ9Fcb6MIqsceLC3+1xMf5LOhZan7Hu+7ri5jhwzD5Kl3xwpFTMwj3ReJkyTDueg8lJu9iS1jXi+YMMcTLWukeauK+E9qX9rK7KIIvEEWjuIE96vLqdmMPQxj30X03PaGw8kGzicvugkQDIB4cFYbt4HPSY9mTO0Nkufm0cYDmES3iLchrwtMHsHEXqMdTGbOCw5ofdwAfaOk34+FVu/s4VqFJzTL2Nc1zSSCA17ix0wQSAIva9+SamIN4GRXp5WBj3AAixBdnMG2s2U+Nw0VqbJgPyayQMzyJ5wEu8znHEYfM3K6GyOzweQD2SQJhM3hr9uk8ahgnva4qxKTeDCAYB75BOdvGT75Hh+aze5tSMZR+/Hm0haLbmIA2c9kyczDbgA5uvPisfu28jFUI19oz1cApWo95p4jXp+SJY6QqtozZnDSB6hHULALFjpKncbLN7zkQy/F0/4rQvcs1vYbMHMn/innp64p92z+8YiXEQSJ/3nXnotXhq1oJOpufFYrYVX7fEcy8x/e/5kHwWpD4HRasc5Rb66GfU6oZ1WU+k6TcwEw3QG3KuVrAfddUYHcQRmBv0shNp4tj6bmUsxaSSQ1py3BBiR2ZbNpupdtnN7NpMtNRgvprJHQWKAdQfSBaxxe3tSBAgW5nS+mllqRLWJLoq3mJvzXYk5nQ0GOAubTPBMxsiq6dQfgiGVW55JLQBwvxFrlBm3IrBvhvDVCORWEaMpsCZtPhosxqne0/UrkuX9WSojd4emGsIY/IHNAJJiRrwN+KWpSYz3XhxIB7MmOETw/NVTKhAyzz8psEZhqg4m2v0tImFtkVR568vzCkr4V72sHMiJkDjaeATKLczrek6Dn8VrcLkDKQa1uYP/i0PZfqluLJrIMwXPUaciBZpb5H4oXbU5Bw0EA8r9oeINl6C+ky+YABzTYcHAg6+XksztvCfu78piHDNbW4i82U0sxjtnVQ1wlpdecosTYix53VniKzMjmtmZeb+7ldcRz18iFX7Nwb6jiGNJI4DuI+qsKux8gxDXOuxge2LTJymLGRcckEOwmhwIkDTW2pA18fRaQ4otBZmzAaEiD3RNgs3sSnaZAuLnTirthGY/wAQ5j8wqjO78OL2U3nVrsvgWkj8KyC3e9uEP7M50WaWHnq6PmsIVm9anHqe4uMBoguiGsAvzZmDQPL4LTVMS5uXLAJc4ExIknNHd2SPBed7l1pYWmcoJ8w0lt/ErdsxYLacROcEyNCQ4a+KYmu2dtKq2kxxdmbmdLW0i90STJId0PnxWQ2ftR7HubTph2SrULTBzxLpbGoEOJjzFlrdi4trcMDInM/laHaes+Kz+xXtacVpmFdzhEiM7b5TwHBMXfxX7U2i6tiKb3tyloYCACJhxJcAb8T5JNrVcxZxsR/looNrPzYlgJkQ0HuzEkW71BiXy9jQdCBrpJ+K0gjees72JaYF2iO4jTms5sF8YmkeVRp8rrQ7xMHsHuiT2e0bn3x5TPBZ3d6+JpA8XgeYKzerOPbqGIgVBNmtbHc4yJ/uVpRuLrLMrkNdxDqdIk/7uPkQtOysCAdJ9FmxrzU5Wa3oM1KDebx6uaFosyy2874xGG++38bU89a9cZ3YboxFf+lzrdz3BaY1JHesns7FNZicVNpc+P7za3Q+iuRiXOcIaWzxPx6LbkPNrGyJbi4tYx6j5+Kp6lN4J7ZdB48dLn18k6pW0uD3fVMTUW3cVnfSgAS8n+1p89URgHsqOh7ovo0fRVu0MRNWiD7rc54TctEW4R14nRXGCoD2uZphpMB1veyyQRxkT5IfWA3pw3s8W9saua7l77Q7TxVa4m50gfVXG+VUnHvnUGmOlmM9FSzrpx48gVFUzlPhnGLcDPy+qHKMwpGQiLzrfkLQpGq7MuXQuQaFj0VTcUE0XR9GFtlZYFhnWD5eq0myHtzsaXGS6TmMizXC3LULOYcRBkypTVLXsIPP8KWJLlb3G4Kb6Taeuo+Cz20ajxQqsJbGZtv4iQ5s3tHC/wCg5m23kAF1x5SLhVO2sU14dB1yuGo4GbFZkv1q2fA+4dN3tXlrc2UCbgQO1zF/1zU292Hc1udwyl4qCxkHtMhvkHLtzAW169KRrfkQx5BPdf1Ctt/GA4O5Ete1zes5gQO6VN/ST8Z3dprDQfmJkObHIiH/ADCuKDGAghrslpMcePPvWV2U8hjQ2bi/fnfEeELU4as73SBJtblyjgtoK3goA4PFMbDh7J7gW8cgzDT7q8WK9uouhj2ltntc2L5e0ItzC8RggCdRY94WK1Go3PcclWD7uQkdDLZ/XNa9tZzGAvywXM1cAbEad4nyKxG51WKlRnB1Nx8WEEemZbvaAaWaiAAb8Q2J017lqcZvVO/E4duHaHH7RxfOWZaJsXAWIPZ1/lVTsvGsbUqEueGnKREzABzZg3hKWhTcAH5WkXgHQXOoA+KFw2ILazg1tixuYA6hsGZPAmJnqgfiaofXaWmWmI4GxOvJTVADVYItLRHioca1zK7J1hhGmh004InCUy+u0AXvbz0QWW9D5wj9AJZ+Nunmshu0f3qh/wCxq2W8rA3BVQbmWAakCHt/iFp/NYjd90Ymif8AyN+Kl6s49Pw1fsPB4Cm3+17h8lqn1ADEzPCOV5nksT7XKao/qYfNxd81oKjtHDmSfqliS40dKqzLqsfvk/7bD94/G1HUnu00At3xy8CqLeioTWw4J4j8Y+ikmVq+tiq2azPjMRN8vtHAcLP19VpAyIuTYT05LM7GrxjcTlNi2oPAvatOx4InmBHW3PvlaYqKu/tcRb6oao4jS4IvGnikrO7UcYQ9WuQqivxNT7TXSmT/AJD6IrD7Se1sA8ZFpIIuCPJUlfEfaO+6PiSmOxvCPmjQXeHFl+JdUIgnISOrWtHyQdSp2Dpx9Z+qXab8z5HIIWoewSsqAKPwzez5qvVlhx2QpFpq5cuVF6zVWFBvEaoShRiCYNgYm95+nqEZRMFaYWGGcRxUdVxzskiJPhI4p7KgQderdtie14XER3oLrE4Nzcua8iwBBtw0042VdtDDlrTIIsefNpHo4eaK9o5jA7KACRyni027j8EBtDFEt14R5gD/AIBBPsOm5uOewEtcQ+QQJ1DiI4LRb6s/cZtZ7D8R81kcJiS3HsdJmQJtN2R0Cv8Ae3a1N+DLQZcXNP8Ak7UXg25rNaig2AyTTAOpaO85+Pmtu7CmRAtxsLnr+tIXnmyjmNMcB8J/Nen7LoFsNcMwizuOmpVtSTRmGpNcwNIsF4LvFhfZYmuzgyq+PulxLfQhfQNMgCBy+K8I30P79if/AGH4BYjpQ27tXLiGHnnb/cxwHqQvRNoUh7EnP/BobXieyeU2XlWHqZXNdyIPkZXpe0tjv9m15e50sa5rYsBlzfTSPFajn6ihZVGQCY+Iuq51QCq05iQWlptc6mB0VmdkfZsfJ7dx0iR8kJjdluY+iBI9o7IC4EAExBBB/XVVITF1C6s0mRGXXWNfmrTdymH4kcmgutxjh3X+SrH4N7MQym8jOSLgyLkjpy5K23UeG4l0z/23Cxubt/8Avgirjfx5/ZqsgCSw2++3QcOS822GzNiaQ5vaPVekb/vecK+W2OSCR/W0zI4/Vea7DcRiaWUSfaMgTF5HHgs1Zyt9jgWOc0kjM1pvN4PNXVPaNgHAhUO3nTWb/UBIGgubfBWz2EAkHgL9/X0W2VtTqtIlp9dFmN5X/b0v9v4yiKVdzDr6Ko23is1RnQj8SBuxX5cXVPR9v9zVfCsS1tzoFlcE8jEv7n/Iq/Y/stvwHwSFLXq9qZQOMxR/h81JiHy4x+tEBiKkCAJ5+KAFwl7jyDUtoUOd2Z57vgmB7uiihsee34BDVX9gjqn4l5zX5KCuez4rKwMCrGmeyO5Vo1Viw2SLSSkSSlQX2HrEHwRLaqq6b7+CJY9bZWTKijrvsD/U1QtemV32HeERY1K5yRJ1Gveg8Q8lhJ6eQTX1TlKjqu7BRTjX/emOgHtMsdDoLo7bjH+zeXTAdAHAS6beapHviowngWm3Qq/2rjg6hUaDq4G4M2LTx7lA/cvDB725tMjjxt2g2dP1C9Io9ltiOOmh7uS8+/0/d2ndGR5uJW/c4juMT5gLNagxjRHK35LwnfdsY6v9/wCQXuAqTPDhfSV4fvoCcZX5h4n+1o+izGqz4K9Y2TjHPwLXZpBp5TJsCwZDfvaV5M5bHdxrquGLM4DabnwIM9sB0ggjjmF5HRajNW1HajBh6bc7ZbmtyBzA3+Pggd59pseaQYJLKjTMxOX+XjBsc1jfghcFiaYpsDmZycxd2haC4CWmwEQfNE717RY+k1rGPaGublLgPdAiJnkR5LTKDG03HF0Wg3eaeQl7iBmeQO2e0BM9dVabl0D+2uFpax5v3tAi+tx6rKMrua9j8xlpa5p1jK7MIHC94nir/c+pU/aSaUl3s3E3aJaMtiXCNY9OEqK1f+oTh+x1WyZAYeH87PJeQ7KfFamf/Iz8QXom9tSv+yPFZhDiGnMG2jOMuZwcRJHQAGei852Y6K1M8qjPxBRZ9bzajSHMdzJHS2WPiVbsqWMxp+artuOGZumoMDr+gj8O0BnAkjy1/IrbBmILQLGbLPbWs5h6/Aq+xbZuBAVBtxsZDzn0y/VKQLhXxiHHm1/4VoGPAEkXgQszSP2/g78BWmrOaGT/AEt80hQNZ9zH60Qz32UNSoSTZC1Hi6hiWk8ZnnqPgoXVBJUeGaCSTpJSuZeyKDxhvPRDVzYeKIxhuELiDYePyWa1ETRdFEkcUKzUd4RgUi1F7RcuXKotKbvgjGFAUXIprlpkSCm1n28Qmtcm1ndnxQTvfYj9XTHv7J7k17rKOo+3ggirvuD+rK6xOKLqL+zqOelh9FQ4jQePyVo4fZv+7Nu6UFvuDVAc+Y4XNuP5r0ibDqR8V5duS7tvB6L0gVPdjn8AVKsoxrRlIHFeO7w4fPj8UzjlqEd7aecerQvYKTLa3XlG0y5u1a1pPbtEz9lNwIkRcwsxqsQStHulncalNrw3M1rjaSQ0wQLiPfWbLYseFvJWW77M1Zrc2XMHX10aXQb/ANKTqXi52fgWOYHPJkl41iIFvUoreDd9jKZfSLoDSTm4xF2QI52VVQrljjluQ54EgEEdZ0tPmrvH46viMMSSxrGtdLWe8YAHaF4Ha4WW2VNi6Yz4doBh7KJhzhfObgQIaPDrqrrceiH4zLYfZv8AeAcLRqCsvVqGaLjEZGAZbWY4tkkau7Ouq1P+nzoxjjypP9SwfNZVdb84XJhagaewA0NaZMHO24JM+C8pwR+0Z99v4gvV/wDUFxOEqngCzuu9ggcz10Xk2CP2jPvs/EEqxucfUkiLX05dFf4IHKY5X8lm9ou7U8yD6LQYFxyC1j6rbB9WzQf1os1vC6zP93/FaPEO7A7vksxvA4dgcs3ySkV7XRVB5g+rXBXlWXBo4QD6W9Vn6x7bD0HxP1WlpvsO4fBSFVrWQSCoKrARa10XV989yArMJ48SiosPT16EhOqHtKKm03g8T/8AU1wIOqghxxuEDWKJxhuhKhupW4Rmo8EY1AsNwiwVIUi5JK5VBtFyLY5AUnIpjlUolrl1Z1vEKJrklV1lUFP08VHVPZ8E0vt4hMrP7KCLEHshHNfLDp7njpwVbWfbxROHJLPA/NQXW57wHP7h8VuqWI7TAL3PHhC802DXLXGBqtjg8WM7J5HXwVnC9bHDVrefxXm2JeP+tOni/r/+AtZbFm0WsYSZiXadL3PBed47aLf+pGsAYzN770w3j1Uxd1nNrsy16zRoKr4nWM5InwIXbJ/7zBJEuyyNe12bT3p+3HziKpiJdMHqAULhH5XsPJzT5EFZ+tfGipNaH1WOAgSWza50E+SsMThWsZ2HuLiIcBEEyBDXRDomI0VdicorvktgsJvzy6DqY9VYHFUi0BzyQNLWlsHskDToeXctsMuXdhg/lzDzdPzK0m57n+3e5mopyTGYhoezNDdSYnS6zNaA5wHB74PMTb4eq1G4+Jcyu8tYXzTcCAWgtBcztDNE3i3VZaq03w2lnwdZpBs6nByxPbaZzSQ4O1EcAei83wh7bPvt/EF6n/qPUY/BZw0Zs7AJjM2TcSO5eV4Uw9h/qb8QperONjtA2B5/T81e4Or2BfgFnNo1JARuGqdkHoF0YWlav2PArM7VOhvqVbe17P8AcqnartOUn4JSBMTqzuHx/NXrHqgxR9zu+ithUUhSPf2nIZ7viUr33chnv+aDqLve+8Uyoe0mUna95TXvuoofGG/ghH6qbFOv4KF5us1qEp6okFCA3RAKQdK5NzJEBbDcohjkGx10Q1yqUS1y6o6xULXJXusVUTl3ySVXWUef5JlR1kR1U28VJhaliO9QPdbxSYV+qKN2ZUh60WDqy4dxWTwju0rrDVr+H0ViVdsrSSMwIuYLjz11Wb2k8ftoI0LqfwAKMp1Li/LXxKqNpkDENI0lh9UpAm3R9u/qG/hA+SrwUZtp81SegQIKxetzi2fXOcksFxYRAgixtqbzPNWmK9nBc4wHNdkDbR0m/P18qbE1JDD/AENHkE81bNuIAMAg5b6iOfzhXWcD1rPdEETYjRaDc5jH13NfcGm6BMSZb52lZt7r2Vtu3iWMq5nxGU685aQR1sk6t4uN8aOTDmTd1SnZs5bNcCSP5jk+SxVD3m94+K02+OPbUawMcCM0nyi/n8VmaJgjvCl6TjQ4p9vFHYSp2R3KorVc2nMqRmJLRAWtZxZOfbz+KC2i+w7/AJIb27uMJlV86pq4XEvkN/XAI8VFU1X6dE8VDzKaYLL7lQueoc6jLjzUMSMfr3lMdUuoyoyo1hlZ0lMlPcVA4opwKlzIdPaUEkrkzMuQENddStqIYFODkTBYelc+yFzJZQwVn0SPfZDhy6VUxI96bQqQU0pQ1RUtB955I1mLi8KuAShyqYsW7QjggMTiC5+Y9PRNc8KNyWkhmMqZnTzCHTnvk9wTFGk2YkBLnsomu4Jub0QTByeHwoGp5goEr1c3gmNcnZAnMpIC21OqcaigYxSBVEgf1SEpumiXMiGuaVwBSyuJRSOK4pC9RuJUDyEwpspHIEco4Tk2EV0JJSLkCrk2EqCQFOBUIKcHIJcyXMo5XSglD04OUQK4OQTSulR+0C4OREpKaUgSSgUlQVHFSgJpCKGaCpA1StCR7OSCLKnBvilCc1AjWJ7QkypzQgcAnZU3MuDkQ7N180pKRc0oH/rvTXd6YTyXByBUqjLk0u70D3dUyQulcTwlFKHeCRz01xSA/oIFc4cvFNJXQkOiDpSErg5NJQdKVNy9y5QdmShyVcg6U8LlyoUDqlDVy5AseiUhKuQdMJ4K5ciEKSFy5FcQuXLkCQl9nYnkuXIEzLmi6VcgkDUzwC5ciOL0jFy5FJN/kuBBXLkCFqbK5cgeJhIuXIInhNJSrkCNKWVy5AiZK5coOXLlyD//2Q==");
-}
-
-  <meta name="description" content="PROG 109 - Chessboard" /> 
-  <meta charset="utf-8" /> 
-  <title>Chess HTML5-Template</title> 
-  <link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/just-letters" type="text/css"/> 
 </head>
-<body> 
-  <h1 id="title">Chessboard</h1> 
-  <div id="container"> 
-    <div class="row"> <!-- Row 1 --> 
-      <div class="white"><img src="https://pixabay.com/static/uploads/photo/2013/07/12/16/56/chess-151540_640.png" alt="chess figure - black castle" width="20"></div> 
-      <div class="black"></div> 
-      <div class="white"></div> 
-      <div class="black"></div> 
-      <div class="white"></div>
-      <div class="black"></div> 
-      <div class="white"></div> 
-      <div class="black"></div> 
-    </div> 
-    <div class="clear"> </div>
-<div class="row"> <!-- Row 2 --> 
-  <div class="black"></div>
-  <div class="white"></div> 
-  <div class="black"></div> 
-  <div class="white"></div> 
-  <div class="black"></div> 
-  <div class="white"></div> 
-  <div class="black"></div> 
-  <div class="white"></div> 
-</div> 
-  <div class="clear"> </div> <div class="row"> <!-- Row 3 --> 
-    <div class="white"></div> 
-    <div class="black"></div> 
-    <div class="white"></div> 
-    <div class="black"></div> 
-    <div class="white"></div>
-    <div class="black"></div> 
-    <div class="white"></div> 
-    <div class="black"></div> 
-  </div>
-  <div class="clear"> </div>
-<div class="row"> <!-- Row 4 --> 
-  <div class="black"></div> 
-  <div class="white"></div> 
-  <div class="black"></div> 
-  <div class="white"></div> 
-  <div class="black"></div> 
-  <div class="white"></div> 
-  <div class="black"></div> 
-  <div class="white"></div> 
-</div> 
-  <div class="clear">  </div>
-  <div class="row"> <!-- Row 5 --> 
-    <div class="white"></div> 
-    <div class="black"></div> 
-    <div class="white"></div> 
-    <div class="black"></div> 
-    <div class="white"></div> 
-    <div class="black"></div> 
-    <div class="white"></div> 
-    <div class="black"></div>
-  </div> 
-  <div class="clear"> </div>
-<div class="row"> <!-- Row 6 --> 
-  <div class="black"></div>
-  <div class="white"></div> 
-  <div class="black"></div> 
-  <div class="white"></div> 
-  <div class="black"></div> 
-  <div class="white"></div>
-  <div class="black"></div>
-  <div class="white"></div> 
-</div> 
-  <div class="clear"> </div>
-  <div class="row"> <!-- Row 7 --> 
-    <div class="white"></div> 
-    <div class="black"></div> 
-    <div class="white"></div> 
-    <div class="black"></div> 
-    <div class="white"></div> 
-    <div class="black"></div> 
-    <div class="white"></div> 
-    <div class="black"></div> 
-  </div> <div class="clear"> 
-  </div>
-<div class="row"> <!-- Row 8 --> 
-  <div class="black"></div> 
-  <div class="white"></div> 
-  <div class="black"></div> 
-  <div class="white"></div> 
-  <div class="black"></div> 
-  <div class="white"></div> 
-  <div class="black"></div> 
-  <div class="white"></div> 
-</div> 
-</div> <!-- END OF CONTAINER -->
-<div class="clear"> </div> 
-  <div id="footer"><p><a href="https://validator.w3.org/nu/check?uri=referer" target="_blank">NU HTML Checker </a><br> <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"></a></p>
-  </div>
- </body>
-</html>
+<body>
+<h1 id="title">Chessboard</h1>
+<div id="container">
+<div class="row"> <!-- Row 1 -->
+<div class="white"><img src="https://pixabay.com/static/uploads/photo/2013/07/12/16/56/chess-151540_640.png" alt="chess figure - black castle" width="20"></div>
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+</div>
+<div class="clear"> </div>
 
+<div class="row"> <!-- Row 2 -->
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+</div>
+<div class="clear"> </div>
+<div class="row"> <!-- Row 3 -->
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+</div>
+<div class="clear"> </div>
+
+<div class="row"> <!-- Row 4 -->
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+</div>
+<div class="clear"> </div>
+<div class="row"> <!-- Row 5 -->
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+</div>
+<div class="clear"> </div>
+
+<div class="row"> <!-- Row 6 -->
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+</div>
+<div class="clear"> </div>
+<div class="row"> <!-- Row 7 -->
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+</div>
+<div class="clear"> </div>
+
+<div class="row"> <!-- Row 8 -->
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+<div class="black"></div>
+<div class="white"></div>
+</div>
+</div> <!-- END OF CONTAINER -->
+
+<div class="clear"> </div>
+<div id="footer"><p><a href="https://validator.w3.org/nu/check?uri=referer" target="_blank">NU HTML Checker </a><br>
+<a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"></a></p></div>
+
+
+</body>
+</html>
