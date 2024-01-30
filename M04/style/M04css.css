@@ -26,3 +26,9 @@
 				height: 10em;
 				margin-bottom: 1em;
 				background-color: #efefef;}
+			#feature {
+			 background-color: #8CC63E;
+			 background-image: url("https://img.freepik.com/free-psd/freesia-flower-png-isolated-transparent-background_191095-11412.jpg");
+			 background-size:contain;
+			 background-position: right;
+			 background-repeat:no-repeat;}
