@@ -16,15 +16,24 @@
 				margin: 1%;}
 			
 			.column 1 {
-			background-color: #1b7ef7;	
-			}
+			 background-color: #1b7ef7;
+			 background-size:contain;
+			 background-position: right;
+			 background-repeat:no-repeat;
+			 }
 			.column 2 {
-			background-color: #2462f2;
-			}
+			 background-size:contain;
+			 background-position: right;
+			 background-repeat:no-repeat;
+			 background-color: #2462f2;
+			 }
 			.column3 {
-			background-color: #650ffa;
-			margin-right: 0%;
-			}
+ 			 background-size:contain;
+			 ackground-position: right;
+			 background-repeat:no-repeat;
+			 background-color: #650ffa;
+			 margin-right: 0%;
+			 }
 			li {
 				display: inline;
 				padding: 0.5em;}
