@@ -15,23 +15,10 @@
 				float: left;
 				margin: 1%;}
 			
-			.column 1 {
-			 background-color: #1b7ef7;
-			 background-size:contain;
-			 background-position: right;
-			 background-repeat:no-repeat;
-			 }
-			.column 2 {
-			 background-size:contain;
-			 background-position: right;
-			 background-repeat:no-repeat;
-			 background-color: #2462f2;
-			 }
+			#article column1 {
+			background-color: #a31bf7
+			}
 			.column3 {
- 			 background-size:contain;
-			 ackground-position: right;
-			 background-repeat:no-repeat;
-			 background-color: #650ffa;
 			 margin-right: 0%;
 			 }
 			li {
