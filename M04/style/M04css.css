@@ -14,13 +14,22 @@
 				width: 31.3%;
 				float: left;
 				margin: 1%;}
+			
+			.column 1 {
+			background-color: #1b7ef7;	
+			}
+			.column 2 {
+			background-color: #2462f2;
+			}
 			.column3 {
-				margin-right: 0%;}
+			background-color: #650ffa;
+			margin-right: 0%;
+			}
 			li {
 				display: inline;
 				padding: 0.5em;}
 			#nav, #footer {
-				background-color: #efefef;
+				background-color: ##3cdde6;
 				padding: 0.5em 0;}
 			#feature, .article {
 				height: 10em;
@@ -28,7 +37,7 @@
 				background-color: #efefef;}
 			#feature {
 			 background-color: #8CC63E;
-			 background-image: url("https://img.freepik.com/free-vector/floral-background-design_1262-2549.jpg");
+			 background-image: url("file:///Users/aideng/Downloads/%E2%80%94Pngtree%E2%80%94beautiful%20flower%20sketch_6521818.png");
 			 background-size:contain;
 			 background-position: right;
 			 background-repeat:no-repeat;}
