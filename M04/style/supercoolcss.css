@@ -1,9 +1,13 @@
-header {
+h1 {
     font-family: 'ChomskyRegular';
     font-weight: normal;
     font-style: normal;
     color:  #39FF14;
     text-align: center;
+}
+
+p {
+color: #39FF14;
 }
 
 body {
