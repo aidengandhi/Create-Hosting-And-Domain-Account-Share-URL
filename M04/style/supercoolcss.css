@@ -3,8 +3,8 @@
     text-align: center;
 }
 
-#myheading {
-    font-family: 'Permanent Marker';
+h1 {
+   font-family: 'Permanent Marker', Cursive; 
    font-weight: normal;
    font-style: normal;
 }
