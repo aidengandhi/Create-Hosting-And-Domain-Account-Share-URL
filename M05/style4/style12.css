@@ -5,7 +5,9 @@ body {
 	color: #fff;
 	font-family: 'Wellfleet', times, serif;
 	font-size: 150%;
-	margin: 0px 0px 0px 0px;}
+	margin: 0px 0px 0px 0px;
+	text-align: center;
+}
 
 h1 {
 	background-image: url('../images/bullseye-logo.png');
