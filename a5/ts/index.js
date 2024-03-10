@@ -17,6 +17,8 @@ function prevSlide() {
   showSlide(currentSlide);
 }
 
+// Show the first slide initially
+showSlide(currentSlide);
+
 // Optional: Automatic slideshow
 // setInterval(nextSlide, 3000); // Change slide every 3000 milliseconds (3 seconds)
-
