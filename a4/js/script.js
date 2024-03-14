@@ -87,3 +87,23 @@ function populateStates() {
 }
 
 populateStates();
+
+function validateForm() {
+    var errorMessages = "";
+
+    var validFirstName = validateFirstName();
+    var validLastName = validateLastName();
+    var validEmail = validateEmail();
+    var validPhone = validatePhone();
+    var validUsername = validateUsername();
+    var validPassword = validatePassword();
+    var validAddress = validateAddress();
+    var validCity = validateCity();
+    var validState = validateState(); // Make sure this is the function call for state validation
+    var validCountry = validateCountry();
+    var validZipCode = validateZipCode();
+
+    if (!validFirstName || !validLastName || !validEmail || !validPhone || !validUsername || !validPassword || !validAddress || !validCity || !validState || !validCountry || !validZipCode) {
+        errorMessages += "<p>Please fix the errors above.</p>";
+    }
+
