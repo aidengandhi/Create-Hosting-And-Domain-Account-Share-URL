@@ -20,7 +20,6 @@ function validateForm() {
     document.getElementById("errorMessages").innerHTML = errorMessages;
 
     return validFirstName && validLastName && validEmail && validPhone && validUsername && validPassword && validAddress && validCity && validState && validCountry && validZipCode;
-    
 }
 
 function validateFirstName() {
@@ -34,7 +33,6 @@ function validateFirstName() {
     }
 }
 
-
 function validateLastName() {
     var lastName = document.getElementById("lastName").value;
     if (!/^[a-zA-Z]+$/.test(lastName) || lastName.length > 50) {
@@ -43,6 +41,9 @@ function validateLastName() {
     } else {
         document.getElementById("lastName").style.border = "";
         return true;
+    }
+}
+
 // Array of states
 var states = [
     "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia",
@@ -63,8 +64,4 @@ function populateStates() {
     }
 }
 
-
 populateStates();
-
-    }
-}
