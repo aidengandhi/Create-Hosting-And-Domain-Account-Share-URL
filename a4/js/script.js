@@ -44,13 +44,35 @@ function validateLastName() {
     }
 }
 
+function validateUsername() {
+    var username = document.getElementById("username").value;
+    if (!/^[a-zA-Z0-9]+$/.test(username) || username.length < 6 || username.length > 20) {
+        document.getElementById("username").style.border = "1px solid red";
+        return false;
+    } else {
+        document.getElementById("username").style.border = "";
+        return true;
+    }
+}
+
+function validatePassword() {
+    var password = document.getElementById("password").value;
+    if (password.length < 8 || password.length > 20) {
+        document.getElementById("password").style.border = "1px solid red";
+        return false;
+    } else {
+        document.getElementById("password").style.border = "";
+        return true;
+    }
+}
+
 // Array of states
 var states = [
     "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia",
     "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland",
     "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey",
     "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina",
-    "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming", "Washington DC"
+    "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming", "Washinton DC"
 ];
 
 // Function to populate the states dropdown
