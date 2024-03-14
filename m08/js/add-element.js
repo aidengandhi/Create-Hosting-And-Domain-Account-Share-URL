@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
   var addItemButton = document.getElementById("addItemButton");
+  var newItemInput = document.getElementById("newItem");
 
   addItemButton.addEventListener("click", function() {
-    var newItemText = document.getElementById("newItem").value;
-    if (newItemText.trim() !== "") {
+    var newItemText = newItemInput.value.trim();
+    if (newItemText !== "") {
       addItemToList(newItemText);
+      newItemInput.value = ""; // Clear the input box
     }
   });
 
