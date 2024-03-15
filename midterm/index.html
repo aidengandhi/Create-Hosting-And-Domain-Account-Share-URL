@@ -108,13 +108,14 @@ function loadContent(page) {
     };
     xhr.send();
 }
-    function submitForm(event) {
-        event.preventDefault(); // Prevent the form from submitting normally
 
-        // Implement code to handle form submission here
-        document.getElementById('contactForm').style.display = 'none'; // Hide the form
-        document.getElementById('thankYou').style.display = 'block'; // Show the thank you message
-    }
+function submitForm(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    // Implement code to handle form submission here
+    document.getElementById('contactForm').style.display = 'none'; // Hide the form
+    document.getElementById('thankYou').style.display = 'block'; // Show the thank you message
+}
 </script>
 
 </body>
