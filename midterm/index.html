@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Simple Template #1 from simpletemplates.org" />
+    <meta name="keywords" content="simple #1, template, simpletemplates.org" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Simple Template #1 - simpletemplates.org</title>
+</head>
+<body>
+<div id="wrap">
+
+<div id="header">
+<h1>Simple Template #1</h1>
+<h2>Free Simple Website HTML/CSS Template</h2>
+</div>
+
+<div id="topmenu">
+<div class="search">
+<input type="text" style="width:220px" />
+<input type="submit" value="Search" />
+</div>
+<ul id="nav">
+    <li><a href="#" onclick="loadContent('home')">Home</a></li>
+    <li><a href="#" onclick="loadContent('about')">About Us</a></li>
+    <li><a href="#" onclick="loadContent('services')">What We Do</a></li>
+    <li><a href="#" onclick="loadContent('team')">The Team</a></li>
+    <li><a href="#" onclick="loadContent('contact')">Contact Us</a></li>
+</ul>
+</div>
+
+<div id="content">
+<h2>Simple Template #1 from simpletemplates.org</h2>
+<p>
+This is a fast loading and search engine friendly template. No images are used for a design - pure html/css template. Code is easy to read for quick and easy editing to suit your needs for a simple website that your visitors will find friendly to use. 
+</p>
+
+<img src="pic3.jpg" alt="Pic 3" />
+
+<div class="cleft">
+<img src="pic1.jpg" alt="Pic 1" />
+</div>
+
+<div class="cright">
+<img src="pic2.jpg" alt="Pic 2" />
+</div>
+
+<div class="clear"> </div>
+
+</div>
+
+<div id="menu">
+
+<h3>Example Articles Menu</h3>
+<ul>
+<li><a href="#" onclick="loadContent('article1')">Title of the first article in the sidebar</a></li>
+<li><a href="#" onclick="loadContent('article2')">Another article title goes here</a></li>
+<li><a href="#" onclick="loadContent('article3')">More to write - more to read</a></li>
+<li><a href="#" onclick="loadContent('article4')">Fourth article in the right side menu</a></li>
+<li><a href="#" onclick="loadContent('article5')">High quality content is important</a></li>
+<li><a href="#" onclick="loadContent('article6')">As many articles as you can!</a></li>
+<li><a href="#" onclick="loadContent('article7')">Nullam facilisis nulla a nibh auctor blandit</a></li>
+<li><a href="#" onclick="loadContent('article8')">Suspendisse eget hendrerit nisi.</a></li>
+<li><a href="#" onclick="loadContent('article9')">Vestibulum accumsan dolor eget magna.</a></li>
+<li><a href="#" onclick="loadContent('article10')">Mauris et lacus a velit congue tincidunt.</a></li>
+</ul>
+
+<h3>Friends and Resources</h3>
+<ul>
+<li><a href="http://www.midpulse.com/support/aff.php?aff=017">MidPulse - Reliable Hosting</a></li>
+<li><a href="http://www.simpletemplates.org">Simple Website Templates</a></li>
+</ul>
+
+</div>
+
+<div class="clear"> </div>
+
+<div id="footer">
+
+<div class="left">
+Copyright &copy; Year by <a href="#">Your Website</a>
+<!-- W3C Markup Validator -->
+<p><a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" 
+
+height="31" width="88" /></a>&nbsp;
+
+<!-- W3C CSS Validator -->
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
+</a>
+</p>
+
+</div>
+
+<div class="right"> 
+<!-- Please consider leaving the credit - link back to our website in the footer intact or if you want to remove it please buy link back free license on http://www.simpletemplates.org/simple-website-template-1.html
+-->
+Design by <a href="http://www.simpletemplates.org">Simple Website Templates</a>
+</div>
+
+
+<div class="clear"> </div>
+
+</div>
+
+</div>
+
+<script>
+    function loadContent(page) {
+        // You can fetch content from a server or define content here
+        // For demonstration purposes, we'll just show a message based on the page name
+        var content = '';
+        switch (page) {
+            case 'home':
+                content = 'Welcome to the Home page';
+                break;
+            case 'about':
+                content = 'Learn more about us on the About Us page';
+                break;
+            case 'services':
+                content = 'Explore our services on the What We Do page';
+                break;
+            case 'team':
+                content = 'Meet our team on the The Team page';
+                break;
+            case 'contact':
+                content = 'Contact us on the Contact Us page';
+                break;
+            default:
+                content = 'Page content not found';
+        }
+        document.getElementById('content').innerHTML = '<h2>' + page.toUpperCase() + '</h2><p>' + content + '</p>';
+    }
+</script>
+
+</body>
+</html>
 
