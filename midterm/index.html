@@ -98,12 +98,18 @@ Design by <a href="http://www.simpletemplates.org">Simple Website Templates</a>
 
 <script>
 function loadContent(page) {
+    console.log("Loading content for page:", page);
     var content = document.getElementById('content');
     var xhr = new XMLHttpRequest();
     xhr.open('GET', page + '.html', true);
     xhr.onreadystatechange = function () {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            content.innerHTML = xhr.responseText;
+        if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+                console.log("Content loaded successfully:", xhr.responseText);
+                content.innerHTML = xhr.responseText;
+            } else {
+                console.error("Failed to load content. Status code:", xhr.status);
+            }
         }
     };
     xhr.send();
@@ -117,6 +123,7 @@ function submitForm(event) {
     document.getElementById('thankYou').style.display = 'block'; // Show the thank you message
 }
 </script>
+
 
 </body>
 </html>
