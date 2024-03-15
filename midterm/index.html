@@ -102,7 +102,17 @@ Design by <a href="http://www.simpletemplates.org">Simple Website Templates</a>
         // For demonstration purposes, let's just show the page name
         alert("Loading " + page + " page...");
     }
-
+function loadContent(page) {
+    var content = document.getElementById('content');
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', page + '.html', true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            content.innerHTML = xhr.responseText;
+        }
+    };
+    xhr.send();
+}
     function submitForm(event) {
         event.preventDefault(); // Prevent the form from submitting normally
 
