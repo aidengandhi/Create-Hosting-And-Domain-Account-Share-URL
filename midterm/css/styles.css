@@ -354,19 +354,13 @@ ANIMATION
   animation: 800ms leftToRight 1s ease forwards;
 }
 
-.animation__wrapper p {
+.animation__wrapper img {
   position: absolute;
   top: 0;
+  left: 0; /* Adjust the position as needed */
+  width: 50px; /* Adjust the width to make it smaller */
+  height: auto; /* Maintain aspect ratio */
   opacity: 0;
-  font-size: 32px;
-  animation: 500ms fadeIn 2000ms ease forwards;
-}
-
-.animation__wrapper audio {
-  position: absolute;
-  top: 60%;
-  opacity: 0;
-  font-size: 32px;
   animation: 500ms fadeIn 2000ms ease forwards;
 }
 
